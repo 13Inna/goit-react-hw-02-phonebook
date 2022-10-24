@@ -1,14 +1,23 @@
-import React from "react";
 import PropTypes from 'prop-types';
-import { TextName, Input } from "components/ContactForm/ContactForm.styled";
+import css from './Filter.module.css';
 
-export const Filter = ({ value, onChange }) => (
-  <TextName>
-    Find contact by name<Input type="text" value={value} onChange={onChange} />
-  </TextName>
-);
+function Filter({ value, onChange }) {
+  return (
+    <label className={css.label}>
+      Find contacts by name
+      <input
+        className={css.input}
+        type="text"
+        value={value}
+        onChange={onChange}
+      />
+    </label>
+  );
+}
 
 Filter.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
+
+export default Filter;
