@@ -34,6 +34,7 @@ class ContactForm extends Component {
             name="name"
             value={name}
             onChange={this.handleChange}
+            placeholder="Inna"
           />
         </label>
         <label className={css.label}>
@@ -44,6 +45,7 @@ class ContactForm extends Component {
             name="number"
             value={number}
             onChange={this.handleChange}
+            placeholder="111-11-11"
           />
         </label>
         <button className={css.btn} type="submit">
